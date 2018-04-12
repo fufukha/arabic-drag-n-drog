@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.card, .pic {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+main {
+  display: grid;
+  grid-template-columns: 200px 300px 300px;
+  grid-template-rows: 100px 100px 100px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center; }
+
+.container {
+  width: 800px;
+  margin: 0 auto; }
+
+main {
+  margin-bottom: 50px; }
+
+main > * {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #f2f3f5;
+  font-family: "Baloo Bhaijaan", sans-serif; }
+
+header {
+  padding-top: 30px; }
+
+h1 {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 0;
+  font-size: 40px; }
+
+.col3 {
+  position: relative; }
+
+.card {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: -2px 2px 4px rgba(51, 51, 51, 0.1);
+  color: #365899;
+  font-size: 40px; }
+
+.box {
+  border: 2px dotted #ced0d4;
+  border-radius: 3px;
+  position: relative; }
+
+.card, .box {
+  width: 300px;
+  height: 100px; }
+
+.correct:after {
+  z-index: 999999;
+  content: '★';
+  color: #f1c646;
+  position: absolute;
+  bottom: 5px;
+  right: 10px; }
+
+svg {
+  width: 80px; }
+  svg:not(:root) {
+    overflow: visible; }
+  svg .cat {
+    overflow: visible;
+    filter: url(#drop-shadow1); }
+  svg .mouse {
+    filter: url(#drop-shadow2); }
+  svg .sheep {
+    filter: url(#drop-shadow3); }
+
+button {
+  margin: 0 auto;
+  grid-column: 1 / span 3;
+  justify-self: center;
+  width: 100px;
+  margin-top: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-family: "Baloo Bhaijaan", sans-serif;
+  padding: 0;
+  border: 1px solid #4267b2;
+  border-radius: 3px;
+  background: #4267b2;
+  color: white;
+  font-size: 12px;
+  transition: 0.2s ease-in background-color, 0.2s ease-in border-color;
+  cursor: pointer; }
+  button:active {
+    background: #263c68;
+    border-color: #263c68; }
+
+/*# sourceMappingURL=main.css.map */

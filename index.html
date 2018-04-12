@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Arabic Drag 'n Drop</title>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Drag and drop to match the word to the image</h1>
+		</header>
+		<main id="game">
+		<!--Row 1-->
+			<div class="pic">
+			<!--Cat SV--> 
+				<svg id="cat-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 334.2 326.2">
+					<defs>
+						<filter id="drop-shadow1" x="0" y="0" width="200%" height="200%">
+							<feOffset result="offOut" in="SourceAlpha" dx="-6" dy="4" />
+							<feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
+							<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+							<feComponentTransfer>
+								<feFuncA type="linear" slope="0.3"/> <!-- slope is the opacity of the shadow -->
+							</feComponentTransfer>
+							<feMerge> 
+								<feMergeNode/> <!-- this contains the offset blurred image -->
+								<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+							</feMerge>
+						</filter>          
+					</defs>
+					<style>.a{fill:#898989;}.b{fill:#69696b;}.c{fill:#121149;}</style>
+					<g class="cat" transform="translate(-84.012813,-147)">
+						<path d="m 172.006,229.976 c 14.426,-15.703 11.18,-39.264 -7.252,-52.624 -12.743,-9.238 -47.971,-12.131 -68.499,-13.036 -7.964,-0.352 -13.838,6.041 -11.854,12.902 5.115,17.684 15.369,82.242 28.112,91.479 18.431,13.36 45.067,-23.018 59.493,-38.721 z" class="a"/>
+						<path d="m 339.994,229.976 c -14.426,-15.703 -11.18,-39.264 7.252,-52.624 12.743,-9.238 47.971,-12.131 68.499,-13.036 7.964,-0.352 13.838,6.041 11.854,12.902 -5.115,17.684 -15.369,82.242 -28.112,91.479 -18.431,13.36 -45.068,-23.018 -59.493,-38.721 z" class="b"/>
+						<path d="m 404.692,274.037 c 0,69.965 -66.572,100.823 -148.692,100.823 -82.12,0 -148.692,-30.858 -148.692,-100.823 0,-69.965 66.572,-127.034 148.692,-127.034 82.12,0 148.692,57.068 148.692,127.034 z" style="fill:#dbdbdd"/>
+						<path d="M 404.692,274.035 C 404.692,204.07 338.12,147 256.002,147 l 0,227.857 c 82.118,10e-4 148.69,-30.855 148.69,-100.822 z" style="fill:#c1c1c1"/>
+						<circle r="10.378" cy="277.25601" cx="197.74899" class="c"/>
+						<circle r="10.378" cy="277.25601" cx="314.25101" class="c"/>
+						<path d="m 267.779,345.031 -5.996,0 0,-27.405 c 0,-3.194 -2.591,-5.784 -5.784,-5.784 -3.193,0 -5.784,2.591 -5.784,5.784 l 0,27.405 -5.996,0 c -3.194,0 -5.784,2.589 -5.784,5.784 0,3.194 2.591,5.784 5.784,5.784 l 23.559,0 c 3.194,0 5.784,-2.589 5.784,-5.784 10e-4,-3.195 -2.588,-5.784 -5.783,-5.784 z" style="fill:#263a7a"/>
+						<path d="m 267.779,345.031 -5.996,0 0,-27.405 c 0,-3.194 -2.591,-5.784 -5.784,-5.784 l 0,44.76 11.779,0 c 3.194,0 5.784,-2.589 5.784,-5.784 10e-4,-3.194 -2.588,-5.787 -5.783,-5.787 z" class="c"/>
+						<path d="m 299.322,206.977 29.349,-43.718 c -8.442,-4.058 -17.387,-7.43 -26.745,-10.031 l -12.222,48.919 c -1.546,6.187 6.122,10.038 9.618,4.83 z" class="b"/>
+						<path d="m 211.361,206.977 c 3.498,5.208 11.164,1.357 9.618,-4.832 l -12.135,-48.562 c -9.278,2.657 -18.144,6.072 -26.507,10.164 l 29.024,43.23 z" class="a"/>
+						<path d="m 262.337,227.628 13.598,-79.453 c -6.525,-0.75 -13.171,-1.174 -19.935,-1.174 -7.215,0 -14.3,0.465 -21.239,1.315 l 13.574,79.312 c 1.419,8.297 12.582,8.297 14.002,0 z" class="a"/>
+						<path d="m 256,147.001 0,86.793 c 2.912,-0.272 5.677,-2.312 6.337,-6.166 l 13.598,-79.453 c -6.525,-0.75 -13.17,-1.174 -19.935,-1.174 z" style="fill:#69696b" />
+						<path d="m 245.031,318.64 -11.242,-14.462 c -5.56,-7.151 0.669,-16.543 10.969,-16.543 l 22.485,0 c 10.3,0 16.529,9.392 10.969,16.543 L 266.97,318.64 c -5.128,6.596 -16.812,6.596 -21.939,0 z" class="c"/>
+						<path d="m 267.242,287.637 -11.242,0 0,35.95 c 4.203,0 8.406,-1.648 10.969,-4.946 l 11.242,-14.462 c 5.559,-7.152 -0.667,-16.542 -10.969,-16.542 z" style="fill:#0c0c42"/>
+					</g>   
+				</svg>
+			</div>
+			<div class="qet box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div>
+				<div id="kharouf" class="card grab" dir="rtl" lang="ar" draggable="true"
+	ondragstart="drag(event)" >الخَرُوف</div>
+			</div>
+		<!--Row 2-->
+			<div class="pic">
+			<!--Mouse SVG-->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.1 313.5">
+					<style>.aa{fill:#3a3a3a;}</style>
+					<defs>
+						<filter id="drop-shadow2" x="0" y="0" width="200%" height="200%">
+							<feOffset result="offOut" in="SourceAlpha" dx="-4" dy="4" />
+							<feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
+							<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+							<feComponentTransfer>
+								<feFuncA type="linear" slope="0.4"/> <!-- slope is the opacity of the shadow -->
+							</feComponentTransfer>
+							<feMerge> 
+								<feMergeNode/> <!-- this contains the offset blurred image -->
+								<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+							</feMerge>
+						</filter>          
+					</defs>
+					<g class="mouse">
+						<circle r="53.4" cy="53.4" cx="53.4" fill="#c86031"/>
+						<path d="m248.4 53.4c0-29.5 23.9-53.5 53.4-53.4C331.4 0.2 355.3 24.1 355.1 53.4c-0.2 29.5-23.9 53.4-53.4 53.4-29.5 0-53.4-23.9-53.4-53.4z" fill="#af4e28"/>
+						<path d="m56.9 115.3c0-66.6 54-105 120.6-105 66.6 0 120.6 38.4 120.6 105 0 66.6-54 177.8-120.6 177.8-66.6 0-120.6-111.2-120.6-177.8z" fill="#d48b07"/>
+						<path d="m177.6 10.3c-0.5 0-1 0-1.4 0l0 282.7c0.5 0 1 0 1.4 0 66.6 0 120.6-111.2 120.6-177.8 0-66.6-54-105-120.6-105z" fill="#aa6b07"/>
+						<circle cx="132.4" cy="137.7" r="8" class="aa"/>
+						<circle cx="222.7" cy="137.7" r="8" class="aa"/>
+						<path d="m197.7 285.1c0 15.7-9.6 28.4-21.5 28.4-11.9 0-21.5-12.7-21.5-28.4 0-15.7 9.6-16.6 21.5-16.6 11.9 0 21.5 0.9 21.5 16.6z" fill="#434849"/>
+						<path d="m176.1 268.5 0 45c11.9 0 21.5-12.7 21.5-28.4 0-15.7-9.6-16.6-21.5-16.6z" fill="#313738"/>
+					</g>        
+				</svg>
+			</div>
+			<div class="far box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div>
+				<div id="qet" class="card grab" dir="rtl" lang="ar"draggable="true"
+	ondragstart="drag(event)">القِطّ</div>
+			</div>
+		<!--Row 3-->
+			<div class="pic">
+			<!--Sheep SVG-->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.7 350.1">
+					<style>.ab{fill:#e87e70;} .bb{fill:#d8d8d8;} .cb{fill:#ffad9e;} .db{fill:#fff;} .eb{fill:#121149;}
+					</style>
+					<defs>
+						<filter id="drop-shadow3" x="0" y="0" width="200%" height="200%">
+							<feOffset result="offOut" in="SourceAlpha" dx="-4" dy="4" />
+							<feGaussianBlur result="blurOut" in="offOut" stdDeviation="6" />
+							<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+							<feComponentTransfer>
+								<feFuncA type="linear" slope="0.3"/> <!-- slope is the opacity of the shadow -->
+							</feComponentTransfer>
+							<feMerge> 
+								<feMergeNode/> <!-- this contains the offset blurred image -->
+								<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+							</feMerge>
+						</filter>          
+					</defs>
+					<g class="sheep" transform="translate(-80.156097,-101.5245)">
+						<path d="m328.1 208.1c-13.2-20.8-7-48.5 13.8-61.7 14.4-9.1 51.6-7.4 73.1-5.4 8.4 0.8 13.7 9.2 10.9 17.1-7.4 20.3-21.7 54.7-36.1 63.8-20.8 13.2-48.5 7-61.7-13.8z" class="ab"/>
+						<path d="m365.9 234.1c-3.7 0-7.3-0.4-11-1.2-13-2.9-24.1-10.7-31.2-22l0 0c-14.7-23.2-7.8-54.1 15.4-68.8 15-9.5 49.8-8.6 76.4-6.2 5.6 0.5 10.5 3.5 13.6 8.3 3 4.8 3.6 10.5 1.7 15.8-9.2 25.1-23.3 56.9-38.2 66.4-8.1 5.1-17.3 7.8-26.6 7.8zm-33.5-28.7c5.6 8.9 14.4 15.1 24.7 17.4 10.3 2.3 20.9 0.5 29.8-5.2 9.6-6.1 22-28.4 34.1-61.2 0.8-2.2 0.6-4.7-0.7-6.7-1.3-2-3.4-3.3-5.7-3.5-34.8-3.1-60.3-1.4-69.9 4.7-18.4 11.7-23.9 36.1-12.2 54.5l0 0z" class="bb"/>
+						<path d="m183.9 208.1c13.2-20.8 7-48.5-13.8-61.7-14.4-9.1-51.6-7.4-73.1-5.4-8.4 0.8-13.7 9.2-10.9 17.1 7.4 20.3 21.7 54.7 36.1 63.8 20.8 13.2 48.5 7 61.7-13.8z" class="cb"/>
+						<path d="m146.1 234c-9.1 0-18.3-2.5-26.6-7.7-15-9.5-29.1-41.3-38.2-66.4-1.9-5.3-1.3-11 1.7-15.8 3-4.8 8-7.8 13.6-8.3 26.6-2.4 61.4-3.3 76.4 6.2 23.2 14.7 30.1 45.6 15.4 68.8l0 0c-9.5 15-25.7 23.2-42.2 23.2zm-17.5-89.4c-9.2 0-19.7 0.5-31.1 1.5-2.4 0.2-4.5 1.5-5.7 3.5-1.3 2-1.5 4.5-0.7 6.7 12 32.8 24.4 55.1 34.1 61.2 18.4 11.7 42.9 6.2 54.5-12.2 11.7-18.4 6.2-42.9-12.2-54.5-6.5-4.1-20-6.2-38.8-6.2z" class="db"/>
+						<path d="m417.1 251.2c0 16.9-19.7 33.2-25.1 52.2-4.9 17.2 4 40.9-4.7 57.6-8.6 16.6-32.9 23-44.5 36.8-12.4 14.8-15.2 40.2-30.2 49.4-16.3 10-38.4 0.1-56.8 0.1-18.4 0-40.4 9.9-56.8-0.1-15-9.2-17.8-34.5-30.2-49.4-11.5-13.9-35.9-20.2-44.5-36.8-8.6-16.7 0.2-40.4-4.7-57.6-5.4-19-25.1-35.3-25.1-52.2 0-16.2 19.3-29 24.3-43.6 5.1-15-2.2-36.9 7.3-49.3 9.5-12.4 32.6-11.2 45.6-20.2 12.8-8.8 19.6-31 34.9-35.7 14.6-4.5 32.8 9.7 49 9.7 16.2 0 34.3-14.2 49-9.7 15.3 4.7 22.1 26.8 34.9 35.7 13 9 36.1 7.8 45.6 20.2 9.5 12.4 2.2 34.3 7.3 49.3 5 14.6 24.3 27.4 24.3 43.6z" class="db"/>
+						<path d="m417.1 251.2c0-16.2-19.3-29-24.3-43.6-5.1-15 2.2-36.9-7.3-49.3-9.5-12.4-32.6-11.2-45.6-20.2-12.8-8.8-19.6-31-34.9-35.7-14.6-4.5-32.8 9.7-49 9.7-0.2 0-0.4 0-0.6 0l0 335.1c0.2 0 0.4 0 0.6 0 18.4 0 40.4 9.9 56.8-0.1 15-9.2 17.8-34.5 30.2-49.4 11.5-13.9 35.9-20.2 44.5-36.8 8.6-16.7-0.2-40.4 4.7-57.6 5.4-19 25.1-35.3 25.1-52.2z" class="bb"/>
+						<path d="m356 232.9c0-29.8-24.1-53.9-53.9-53.9-19.5 0-36.6 10.3-46.1 25.8-9.5-15.5-26.6-25.8-46.1-25.8-29.8 0-53.9 24.1-53.9 53.9 0 27.1 20 49.5 46.1 53.4l0 18.1c0 29.8 24.1 53.9 53.9 53.9 29.8 0 53.9-24.1 53.9-53.9l0-18.1c26.1-3.8 46.1-26.2 46.1-53.4z" class="cb"/>
+						<path d="m302.1 179c-19.5 0-36.6 10.3-46.1 25.8-0.2-0.3-0.4-0.6-0.6-0.9l0 154.3c0.2 0 0.4 0 0.6 0 29.8 0 53.9-24.1 53.9-53.9l0-18.1c26-3.8 46.1-26.2 46.1-53.4 0-29.8-24.1-53.9-53.9-53.9z" class="ab"/>
+						<circle r="7.7" cy="235.1" cx="297.6" class="eb"/>
+						<circle r="7.7" cy="235.1" cx="214.4" class="eb"/>
+						<path d="m269.4 296.1-26.7 0c-2.4 0-4.3 1.9-4.3 4.3 0 2.4 1.9 4.3 4.3 4.3l9.1 0 0 32.3c0 2.4 1.9 4.3 4.3 4.3 2.4 0 4.3-1.9 4.3-4.3l0-32.3 9.1 0c2.4 0 4.3-1.9 4.3-4.3 0-2.4-1.9-4.3-4.3-4.3z" fill="#773426"/>
+						<path d="m269.4 296.1-13.9 0 0 45.2c0.2 0 0.4 0.1 0.6 0.1 2.4 0 4.3-1.9 4.3-4.3l0-32.3 9.1 0c2.4 0 4.3-1.9 4.3-4.3 0-2.4-1.9-4.3-4.3-4.3z" fill="#7c012e"/>
+					</g>
+				</svg>      
+			</div>
+			<div class="kharouf box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div>
+				<div id="far" class="card grab" dir="rtl" lang="ar" draggable="true"
+	ondragstart="drag(event)">الفَأر</div>
+			</div>
+			<button onclick="reset()">Reset</button>
+		</main>
+	</div>
+	<script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+</html>
+
+

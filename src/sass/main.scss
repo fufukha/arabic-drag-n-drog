@@ -1,0 +1,160 @@
+//===============
+//  Variables
+//===============
+$bg_color: #f2f3f5;
+$gap-size: 20px;
+$grid-area: ('img', 'box', 'word');
+$card-color: white;
+$card-color_text: grey;
+$border-color: #ced0d4;
+$border-radius: 3px;
+$primary-color_text: #365899;
+$card-width: 300px;
+$card-height: 100px;
+$font-family: 'Baloo Bhaijaan', sans-serif;
+$button-height: 30px;
+$button-color: #4267b2;
+
+//===============
+//  Placeholders
+//===============
+%center_horiz-vert {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%grid {
+	display: grid; 
+	grid-template-columns:200px 300px 300px;
+	grid-template-rows: 100px 100px 100px;
+	grid-column-gap: $gap-size;
+	grid-row-gap: $gap-size;
+	justify-content: center;
+	justify-items: center;
+	align-items: center
+}
+
+//===============
+//     Grid
+//===============
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+main {
+	margin-bottom: 50px;
+	@extend %grid;
+}
+
+main > * {
+	width: 100%;
+	height: 100%;
+}
+
+body { 
+	background: $bg_color;
+	font-family: $font-family;
+}
+
+//===============
+//  Header
+//===============
+header {
+	padding-top: 30px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 100px;
+	margin-top: 0;
+	font-size: 40px;
+}
+
+//===============
+//Card, Box, Pic
+//===============
+.col3 {
+	position: relative;
+}
+
+.card {
+	background-color: $card-color;
+	border-radius: $border-radius;
+	box-shadow: -2px 2px 4px rgba(51, 51, 51, 0.1);
+	color: $primary-color_text;
+	font-size: 40px;
+	@extend %center_horiz-vert;
+}
+
+.box {
+	border: 2px dotted $border-color;
+	border-radius: $border-radius;
+	position: relative;
+}
+
+.card, .box {
+	width: $card-width;
+	height: $card-height;
+}
+
+.pic {
+	@extend %center_horiz-vert;
+}
+
+.correct:after {
+	z-index: 999999;
+	content: '★';
+	color: #f1c646;
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+}
+
+//===============
+//     SVG
+//===============
+svg {
+	width: 80px;
+	&:not(:root) {
+		overflow: visible;
+	}
+	.cat {
+		overflow: visible;
+		filter:url(#drop-shadow1);
+	}
+	.mouse {
+		filter:url(#drop-shadow2);
+	}
+	.sheep {
+		filter:url(#drop-shadow3);
+	}
+}
+
+//===============
+//    Button
+//===============
+button {
+	margin: 0 auto;
+	grid-column: 1 / span 3;
+	justify-self: center;
+	width: 100px;
+	margin-top: 30px;
+	height: $button-height;
+	line-height: $button-height;
+	text-transform: capitalize;
+	font-family: $font-family;
+	padding: 0;
+	border: 1px solid $button-color;
+	border-radius: $border-radius;
+	background: $button-color;
+	color: white;
+	font-size: 12px;
+	transition: 0.2s ease-in background-color, 0.2s ease-in border-color;
+	cursor: pointer;
+	&:active {
+		background: darken($button-color, 20%);
+		border-color: darken($button-color, 20%);
+	}
+}
